@@ -8,14 +8,14 @@
 
  */
 function doubleEvenNumbers(numbers) {
-  const newNumbers = [];
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-      newNumbers.push(numbers[i] * 2);
-    }
-  }
-  return newNumbers;
-}
+    const filteredNumbers = myNumbers.filter((myNumber) => {
+        return myNumber % 2 === 0;
+    });
+    const mappedNumbers = filteredNumbers.map((myNumber) => {
+        return myNumber * 2;
+    });
 
+    return mappedNumbers;
+}
 const myNumbers = [1, 2, 3, 4];
 console.log(doubleEvenNumbers(myNumbers)); // Logs "[4, 8]" to the console
