@@ -26,11 +26,7 @@ function createBookList(books) {
         const listItem = document.createElement('li');
         img.src = book.url;
         p.innerText = book.title + ' ' + book.author;
-        if (book.alreadyRead) {
-            listItem.style.backgroundColor = 'green';
-        } else {
-            listItem.style.backgroundColor = 'red';
-        }
+        listItem.style.backgroundColor = book.alreadyRead ? 'green' : 'red';
         listItem.appendChild(img);
         listItem.appendChild(p);
         ul.appendChild(listItem);

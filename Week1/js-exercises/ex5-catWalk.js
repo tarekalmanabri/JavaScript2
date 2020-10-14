@@ -40,3 +40,39 @@ function catWalk() {
 }
 
 setInterval(catWalk, 50);
+
+
+
+
+// i know here its not complete but its the first time i use it i tried to figure it out but i have some questions about it ill send them on slack.
+
+
+// const element = catImg;
+// let start;
+
+// function step(timestamp) {
+//     if (start === undefined) {
+//         start = timestamp;
+//     }
+//     const elapsed = timestamp - start;
+//     let imgWidth = window.innerWidth - catImg.width;
+
+//     // `Math.min()` is used here to make sure that the element stops at exactly 200px.
+//     element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, imgWidth / 2) + 'px)';
+
+//     if (catImg.scrollLeft < imgWidth / 2) { // Stop the animation after 2 seconds
+//         window.requestAnimationFrame(step);
+
+//     }
+
+//     if (catImg.scrollLeft === imgWidth / 2) {
+//         catImg.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+//         timeout = setTimeout(function() {
+//             catMove = true;
+//             catImg.src = originalImg;
+//             timeout = false;
+//         }, 5000);
+//     }
+// }
+
+// window.requestAnimationFrame(step);

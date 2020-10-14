@@ -1,5 +1,5 @@
 // your code goes in here// your code goes in here
-let quotes = [{
+const quotes = [{
         quote: 'I try to create sympathy for my characters, then turn the monsters loose.',
         person: '- Stephen King',
     },
@@ -26,7 +26,7 @@ let quotes = [{
 ];
 
 function randomQuote() {
-    let random = Number.parseInt(Math.random() * quotes.length + 1);
+    const random = Number.parseInt(Math.random() * quotes.length + 1);
     document.getElementById('quotes').innerHTML = quotes[random].quote;
     document.getElementById('quote-creator').innerHTML = quotes[random].person;
 }

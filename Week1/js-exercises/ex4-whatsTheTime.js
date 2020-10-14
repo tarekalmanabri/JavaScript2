@@ -14,12 +14,12 @@
 function displayCurrentTime() {
     // your code goes in here
     const clock = new Date();
-    const h = clock.getHours();
-    let m = clock.getMinutes();
-    let s = clock.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('num').innerHTML = h + ':' + m + ':' + s;
+    const hours = clock.getHours();
+    let minutes = clock.getMinutes();
+    let seconds = clock.getSeconds();
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    document.getElementById('num').innerHTML = hours + ':' + minutes + ':' + seconds;
 }
 
 function checkTime(i) {

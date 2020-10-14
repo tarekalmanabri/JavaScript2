@@ -1,0 +1,13 @@
+ul {
+    display: inline-flex;
+}
+
+li {
+    display: flex;
+    margin: 20px;
+}
+
+img {
+    padding: 10px;
+    width: 100px;
+}
