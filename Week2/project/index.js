@@ -23,14 +23,26 @@ let isPlaying = false;
 let isPaused = false;
 let interval;
 
+function outputTime(timeInSeconds) {
+    const remainder = timeInSeconds % 60;
+    const minutesInSeconds = timeInSeconds - remainder;
+    let seconds = remainder;
+
+    if (seconds < 10) {
+        seconds = "0" + seconds
+    }
+
+    timeDisplay.innerText = minutesInSeconds / 60 + ':' + seconds;
+}
+
 function timeChange(newAmount) {
     if (isPlaying || isPaused) {
         return
     }
     minutesTimer = newAmount;
     minutes.innerText = minutesTimer;
-    timeDisplay.innerText = minutesTimer + ':00';
     secondsTimer = minutesTimer * 60;
+    outputTime(secondsTimer);
 }
 
 function updateCounter() {
@@ -40,14 +52,8 @@ function updateCounter() {
         return;
     }
     secondsTimer--;
-    const remainder = secondsTimer % 60;
-    const minutesInSeconds = secondsTimer - remainder;
-    let seconds = remainder;
 
-    if (seconds < 10) {
-        seconds = "0" + seconds
-    }
-    timeDisplay.innerText = minutesInSeconds / 60 + ':' + seconds;
+    outputTime(secondsTimer);
 }
 
 function startCounter() {

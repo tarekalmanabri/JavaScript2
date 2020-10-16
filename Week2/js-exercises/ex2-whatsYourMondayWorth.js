@@ -13,7 +13,7 @@
 
 function dayWorth(tasks, hourlyRate) {
     // put your code in here, the function does returns a euro formatted string
-    const durationLength = mondayTasks.map((mondayTask) => (mondayTask.duration / 60) * hourlyRate);
+    const durationLength = tasks.map((task) => (task.duration / 60) * hourlyRate);
     durationLength.reduce((a, b) => a + b, 0);
     const totalAmount = durationLength.reduce((total, durationLength) => durationLength + total, 0);
     const returnedValue = '€ ' + totalAmount.toFixed(2);

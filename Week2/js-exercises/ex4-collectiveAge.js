@@ -11,7 +11,7 @@
 function collectiveAge(people) {
     // return the sum of age for all the people
     const ages = people.map((person) => person.age);
-    const ageSum = ages.reduce((total, ages) => total + ages, 0);
+    const ageSum = ages.reduce((total, age) => total + age, 0);
     return ageSum;
 }
 
