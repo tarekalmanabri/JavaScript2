@@ -1,0 +1,43 @@
+body {
+    background-color: #69160b;
+    text-align: center;
+}
+
+.main {
+    width: 30%;
+    margin: auto;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.heading {
+    background-color: #1f020b;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+    padding: 1px;
+}
+
+form {
+    padding: 30px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    color: white;
+    background-color: #ad133a;
+    border-radius: 5px;
+}
+
+.tip {
+    color: cadetblue;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#tipAmount,
+#each {
+    display: none;
+}
